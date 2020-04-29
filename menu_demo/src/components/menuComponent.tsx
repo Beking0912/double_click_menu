@@ -5,10 +5,11 @@ import Tap from "@any-touch/tap";
 interface IProps {
   cancelButtonStyle?: React.CSSProperties;
   children: React.ReactChild;
+  contain: React.ReactChild;
 }
 
 const MenuComponent = (props: IProps) => {
-  const { cancelButtonStyle = null, children = null } = props;
+  const { cancelButtonStyle = null, children = null, contain = null } = props;
 
   useEffect(() => {
     Core.use(Tap, { pointLength: 2 });
@@ -19,22 +20,21 @@ const MenuComponent = (props: IProps) => {
       drawer.style.transform = "translateY(-40vh)";
       drawer.style.transition = "all 500ms";
     });
-  });
 
-  const hideMenu = () => {
     Core.use(Tap, { pointLength: 1 });
     const cancel = document.getElementById("cancel");
     const att = new Core(cancel);
-    const drawer = document.getElementById("drawer");
     att.on("tap", (ev) => {
       drawer.style.transform = "translateY(40vh)";
       drawer.style.transition = "all 500ms";
     });
-  };
+  });
 
   return (
     <div style={{ height: "120vh" }}>
-      <div style={{ height: "100vh" }} id="handler"></div>
+      <div style={{ height: "100vh" }} id="handler">
+        {contain}
+      </div>
       <div
         style={{
           height: "40vh",
@@ -54,7 +54,6 @@ const MenuComponent = (props: IProps) => {
             borderTopWidth: "1px",
           }}
           id="cancel"
-          onClick={hideMenu}
         >
           取消
         </div>
