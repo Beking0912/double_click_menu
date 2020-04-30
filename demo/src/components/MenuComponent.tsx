@@ -2,7 +2,7 @@
  * @Author: beking
  * @Date: 2020-04-29 16:40:21
  * @Last Modified by: beking
- * @Last Modified time: 2020-04-30 11:01:34
+ * @Last Modified time: 2020-04-30 11:53:57
  */
 
 import React, { useEffect } from "react";
@@ -44,7 +44,7 @@ const MenuComponent = (props: IProps) => {
       </div>
       <div
         style={{
-          height: "40vh",
+          // height: "40vh",
           width: "100%",
           backgroundColor: "#F5F5F5",
           display: "flex",
@@ -55,10 +55,14 @@ const MenuComponent = (props: IProps) => {
         <div style={{ flex: 1 }}>{children}</div>
         <div
           style={{
-            height: "20%",
+            height: "50px",
+            lineHeight: "50px",
             borderTopStyle: "solid",
             borderTopColor: "#ced6e0",
             borderTopWidth: "1px",
+            backgroundColor: "white",
+            textAlign: "center",
+            fontSize: "18px",
           }}
           id="cancel"
         >

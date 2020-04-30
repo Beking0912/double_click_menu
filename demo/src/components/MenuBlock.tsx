@@ -2,11 +2,10 @@
  * @Author: beking
  * @Date: 2020-04-29 16:40:05
  * @Last Modified by: beking
- * @Last Modified time: 2020-04-30 11:02:24
+ * @Last Modified time: 2020-04-30 11:20:25
  */
 
 import React from "react";
-import "./Style.css";
 
 interface IProps {
   name: string;
@@ -24,7 +23,15 @@ const MenuBlock = (props: IProps) => {
   } = props;
 
   return (
-    <div className="IconBox">
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        margin: "10px"
+      }}
+    >
       <div
         style={{
           borderRadius: "10px",
