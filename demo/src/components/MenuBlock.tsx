@@ -2,7 +2,7 @@
  * @Author: beking
  * @Date: 2020-04-29 16:40:05
  * @Last Modified by: beking
- * @Last Modified time: 2020-04-30 11:20:25
+ * @Last Modified time: 2020-04-30 16:23:14
  */
 
 import React from "react";
@@ -29,7 +29,7 @@ const MenuBlock = (props: IProps) => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        margin: "10px"
+        margin: "10px",
       }}
     >
       <div
@@ -41,9 +41,7 @@ const MenuBlock = (props: IProps) => {
           marginBottom: "8px",
         }}
         onClick={onHandle}
-      >
-        图标
-      </div>
+      ></div>
       <div style={{ fontSize: "14px", color: "#84817a" }}>{name}</div>
     </div>
   );

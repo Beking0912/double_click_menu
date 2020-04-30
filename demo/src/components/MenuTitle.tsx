@@ -2,7 +2,7 @@
  * @Author: beking
  * @Date: 2020-04-29 16:42:07
  * @Last Modified by: beking
- * @Last Modified time: 2020-04-29 17:24:08
+ * @Last Modified time: 2020-04-30 16:23:11
  */
 
 import React from "react";
@@ -36,9 +36,7 @@ const MenuTitle = (props: IProps) => {
           marginRight: "12px",
           boxShadow: "0px 1px 5px #888888",
         }}
-      >
-        图标
-      </div>
+      ></div>
       <div
         style={{
           display: "flex",
