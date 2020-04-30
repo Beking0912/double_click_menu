@@ -1,8 +1,8 @@
 /*
- * @Author: beking 
- * @Date: 2020-04-29 16:40:21 
- * @Last Modified by:   beking 
- * @Last Modified time: 2020-04-29 16:40:21 
+ * @Author: beking
+ * @Date: 2020-04-29 16:40:21
+ * @Last Modified by: beking
+ * @Last Modified time: 2020-04-30 11:01:34
  */
 
 import React, { useEffect } from "react";
@@ -10,28 +10,28 @@ import Core from "@any-touch/core";
 import Tap from "@any-touch/tap";
 
 interface IProps {
-  cancelButtonStyle?: React.CSSProperties;
+  // cancelButtonStyle?: React.CSSProperties;
   children: React.ReactChild;
   contain: React.ReactChild;
 }
 
 const MenuComponent = (props: IProps) => {
-  const { cancelButtonStyle = null, children = null, contain = null } = props;
+  const { children = null, contain = null } = props;
 
   useEffect(() => {
-    Core.use(Tap, { pointLength: 2, name:'tapTwice' });
-    const handler = document.getElementById("handler");
+    Core.use(Tap, { pointLength: 2, name: "tapTwice" });
+    const handler: any = document.getElementById("handler");
     const at = new Core(handler);
-    const drawer = document.getElementById("drawer");
+    const drawer: any = document.getElementById("drawer");
     at.on("tapTwice", (ev) => {
       drawer.style.transform = "translateY(-40vh)";
       drawer.style.transition = "all 500ms";
     });
 
-    Core.use(Tap, { pointLength: 1, name:'tap' });
-    const cancel = document.getElementById("cancel");
+    Core.use(Tap, { pointLength: 1, name: "tapOnce" });
+    const cancel: any = document.getElementById("cancel");
     const att = new Core(cancel);
-    att.on("tap", (ev) => {
+    att.on("tapOnce", (ev) => {
       drawer.style.transform = "translateY(40vh)";
       drawer.style.transition = "all 500ms";
     });

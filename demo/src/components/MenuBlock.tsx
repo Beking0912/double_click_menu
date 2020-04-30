@@ -2,11 +2,11 @@
  * @Author: beking
  * @Date: 2020-04-29 16:40:05
  * @Last Modified by: beking
- * @Last Modified time: 2020-04-30 10:11:33
+ * @Last Modified time: 2020-04-30 11:02:24
  */
 
 import React from "react";
-import styles from "./style.css";
+import "./Style.css";
 
 interface IProps {
   name: string;
@@ -18,13 +18,13 @@ interface IProps {
 const MenuBlock = (props: IProps) => {
   const {
     name = "未命名",
-    icon = null,
-    onHandle = null,
-    isRed = false,
+    // icon = null,
+    onHandle = () => {},
+    // isRed = false,
   } = props;
 
   return (
-    <div className={styles.iconBox}>
+    <div className="IconBox">
       <div
         style={{
           borderRadius: "10px",
